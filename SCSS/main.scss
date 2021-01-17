@@ -1,0 +1,277 @@
+@import 'base';
+@import 'variables';
+@import 'config';
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5% 4%;
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+    width: 40px;
+    height: 38px;
+    border: 2px solid map-get($map: $color, $key: dark-violet);
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    .line {
+      width: 25px;
+      height: 4px;
+      border-radius: 100px;
+      background-color: map-get($map: $color, $key: dark-violet);
+      margin: 7px auto;
+      transition: all 0.5s ease;
+
+      &::before {
+        content: '';
+        width: 25px;
+        height: 4px;
+        border-radius: 100px;
+        background-color: map-get($map: $color, $key: dark-violet);
+        margin: 8px auto;
+        position: absolute;
+      }
+      &::after {
+        content: '';
+        width: 25px;
+        height: 5px;
+        border-radius: 100px;
+        background-color: map-get($map: $color, $key: dark-violet);
+        margin: 16px auto;
+        position: absolute;
+      }
+    }
+  }
+}
+.navigation-mobile {
+  width: 100%;
+  height: 90vh;
+  transition: all 0.5s ease;
+  background-color: map-get($map: $color, $key: vdark-violet);
+  position: absolute;
+  //   transform: translateY(-100%);
+  z-index: 3;
+  //   display: none;
+  background-image: map-get($map: $bg, $key: nav);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+
+  .nav {
+    &-links {
+      text-align: center;
+      padding: 0;
+      padding-top: 30px;
+
+      .nav-item {
+        padding: 3% 0;
+      }
+      .nav-link {
+        text-decoration: none;
+        font-size: 7vw;
+        color: #fff;
+        text-transform: uppercase;
+
+        &:hover {
+          color: map-get($map: $color, $key: dgrayish-blue);
+        }
+      }
+    }
+  }
+}
+#section1 {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 124px;
+    height: 340px;
+    position: absolute;
+    background-image: map-get($map: $bg, $key: back);
+    background-repeat: no-repeat;
+    right: 0;
+    top: 86%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    width: 100%;
+  }
+  .content {
+    display: inline-block;
+    width: 100%;
+    background-color: map-get($map: $color, $key: dark-violet);
+    z-index: -1;
+    padding: 90px 9%;
+    margin-top: -7px;
+    background-image: url(../img/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+      font-size: 11vw;
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 100%;
+      margin-top: 0px;
+      text-align: center;
+    }
+    p {
+      color: white;
+      width: 100%;
+      line-height: 1.2;
+      text-align: center;
+      font-size: 4vw;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .line {
+      display: none;
+    }
+    .btn {
+      margin: auto;
+      width: fit-content;
+    }
+  }
+}
+#section2 {
+  width: 100%;
+  margin-top: 150px;
+  padding: 0 9%;
+  text-align: center;
+
+  .main-section-line {
+    width: 200px;
+    border-top: 2px solid lightgray;
+    margin: auto;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    color: map-get($map: $color, $key: vdark-violet);
+    font-size: 10vw;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .details {
+    .process {
+      h3 {
+        font-family: 'DM Serif Display', serif;
+        color: map-get($map: $color, $key: vdark-violet);
+        font-weight: 400;
+        font-weight: 7vw;
+        margin-bottom: 10px;
+      }
+      p {
+        color: map-get($map: $color, $key: light-grayish-blue);
+        width: 100%;
+        line-height: 25px;
+        margin: auto;
+        line-height: 25px;
+        margin-bottom: 50px;
+        font-size: 4vw;
+      }
+    }
+  }
+  .work {
+    width: 100%;
+    background-color: map-get($map: $color, $key: dark-violet);
+    padding: 70px 0px 80px 0px;
+    background-image: url(../img/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-top: 150px;
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 10vw;
+      color: white;
+      margin: auto;
+      width: 90%;
+      line-height: 100%;
+    }
+    .button {
+      width: 40%;
+      margin: 50px auto 0px auto;
+    }
+  }
+}
+#footer {
+  margin-top: 200px;
+  padding: 0 9%;
+  background-color: map-get($map: $color, $key: vlight-gray);
+  background-image: url(../img/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+
+  .first-section {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding-top: 60px;
+    padding-bottom: 35px;
+    text-align: center;
+
+    .social {
+      display: flex;
+      justify-content: space-between;
+      width: 160px;
+      margin: auto;
+      margin-top: 20px;
+
+      .medias {
+        cursor: pointer;
+      }
+      .fab {
+        font-size: 30px;
+        color: map-get($map: $color, $key: light-grayish-blue);
+
+        &:hover {
+          color: map-get($map: $color, $key: dark-violet);
+        }
+      }
+    }
+  }
+  .about-us {
+    padding-bottom: 60px;
+    text-align: center;
+
+    .about {
+      h4 {
+        color: map-get($map: $color, $key: light-grayish-blue);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        margin-top: 50px;
+        text-align: center;
+      }
+      .footer-links {
+        padding-left: 0;
+      }
+      .footer-item {
+        margin-bottom: 20px;
+      }
+      .footer-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        color: map-get($map: $color, $key: vdark-violet);
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+@import 'media';
