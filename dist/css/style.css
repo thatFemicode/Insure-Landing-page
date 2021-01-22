@@ -6,13 +6,16 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Karla", sans-serif; }
+  font-family: 'Karla', sans-serif; }
 
 img {
   max-width: 100%; }
 
 li {
   list-style: none; }
+
+.femi {
+  width: 20%; }
 
 .x .line {
   transform: rotate(45deg);
